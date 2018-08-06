@@ -1,0 +1,8 @@
+const http = require('http')
+const app = require('../index')
+
+const port = parseInt(process.env.PORT || 3000)
+app.set('PORT', port)
+
+http.createServer(app)
+  .listen(port)

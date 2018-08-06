@@ -1,0 +1,23 @@
+{
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  },
+  "presets": ["react-native"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@src": "./src",
+          "@screens": "./src/screens",
+          "@styles": "./src/styles",
+          "@components": "./src/components"
+        }
+      }
+    ],
+    ["transform-object-rest-spread"]
+  ]
+}
